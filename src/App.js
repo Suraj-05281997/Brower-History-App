@@ -132,20 +132,16 @@ class App extends Component {
               type="search"
               className="input-element"
               placeholder="Search history"
-              onChange={this.onChangeFunction}
+              onChange={this.ChangeFunction}
               value={searchInput}
             />
           </div>
         </div>
         <div className="content-holder">
-          {isTrue && (
+          {!isTrue && (
             <ul className="inner-holder">
               {newHistoryList.map(eachObject => (
-                <li
-                  key={eachObject.id}
-                  uniqueId={eachObject.id}
-                  className="items-holder"
-                >
+                <li key={eachObject.id} className="items-holder">
                   <p className="time">{eachObject.timeAccessed}</p>
                   <div className="icon-holder">
                     <img
